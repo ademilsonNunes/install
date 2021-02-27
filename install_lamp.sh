@@ -79,6 +79,7 @@ sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 
 ## config sql_srv extension
+sudo chmod -R 777 /etc/php/7.4/
 printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/7.4/mods-available/sqlsrv.ini
 printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/7.4/mods-available/pdo_sqlsrv.ini
 #exit

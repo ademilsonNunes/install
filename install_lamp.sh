@@ -73,8 +73,8 @@ sudo apt-get -y install unixodbc-dev
 
 ## Install sql_srv extension
 echo -e "\e[96m install sql_srv extension  \e[39m"
-sudo apt-get -y install php-pear php7.4-dev
-
+sudo apt-get -y install php-pear
+sudo apt-get -y install php7.4-dev
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 

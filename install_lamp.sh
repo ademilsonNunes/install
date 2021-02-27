@@ -61,7 +61,7 @@ echo -e "\e[96m Install Dependencies from pdo_sqlsrv  \e[39m"
 cd ~
 sudo bash -c 'curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -'
 sudo bash -c 'curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list'
-exit 
+#exit 
 
 sudo ACCEPT_EULA=Y apt-get -y install msodbcsql17 
 sudo ACCEPT_EULA=Y apt-get -y install mssql-tools 
@@ -79,7 +79,7 @@ sudo pecl install pdo_sqlsrv
 ## config sql_srv extension
 printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/7.4/mods-available/sqlsrv.ini
 printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/7.4/mods-available/pdo_sqlsrv.ini
-exit
+#exit
 sudo phpenmod -v 7.4 sqlsrv pdo_sqlsrv 
 
 # Download and install composer 
@@ -120,7 +120,7 @@ echo -e "\e[92m Open http://localhost/ to check if apache is working or not. \e[
 # Install SpaceVim 
 echo -e "\e[96m Install SpaceVim  \e[39m"
 sudo bash -c  'curl -sLf https://spacevim.org/install.sh | bash'
-exit
+#exit
 
 # Clean up cache
 sudo apt-get clean

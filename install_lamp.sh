@@ -125,6 +125,11 @@ echo -e "\e[96m Install SpaceVim  \e[39m"
 sudo bash -c  'curl -sLf https://spacevim.org/install.sh | bash'
 #exit
 
+# Config gitHub  
+echo -e "\e[96m Config gitHub  \e[39m"
+git config --global user.name "AdemilsonNunes"
+git config --global user.email "ti@sobelsuprema.com.br"
+
 # Clean up cache
 sudo apt-get clean
 

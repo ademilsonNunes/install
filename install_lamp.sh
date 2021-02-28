@@ -133,5 +133,6 @@ git config --global user.name "AdemilsonNunes"
 git config --global user.email "ti@sobelsuprema.com.br"
 
 # Clean up cache
-sudo apt-get clean
+sudo apt-get -y clean
+echo -e "\e[96m Setup Complete! - AdemilsonNunes v1.0\e[39m"
 

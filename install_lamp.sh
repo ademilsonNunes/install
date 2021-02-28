@@ -58,6 +58,8 @@ sudo apt-get -y install rvm
 echo -e "\e[96m Install Dependencies from pdo_sqlsrv  \e[39m"
 ## install dependencies from sql_srv driver to SQL Server Connect
 ## fixar bug
+sudo sudo apt-get -y dist-upgrade
+sudo apt-get update
 cd ~
 sudo bash -c 'curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -'
 sudo bash -c 'curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list'

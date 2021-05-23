@@ -12,14 +12,6 @@ $data = array(
 );
 $payload = json_encode($data);
 
-//set the directory for the cookie using defined document root var
-//build a unique path with every request to store. the info per user with custom func. I used this function to build unique paths based on member ID, that was for my use case. It can be a regular dir.
-//$path = build_unique_path($path); // this was for my use case
-
-//login form action url
-
-
-
 if(file_exists('file.txt'))
 {
     unlink('file.txt'); 
@@ -53,5 +45,12 @@ curl_setopt($ch, CURLOPT_URL, "http://www.totvs.sobelmaster.com.br:8081/AFVWeb/P
 //do stuff with the info with DomDocument() etc
 $html = curl_exec($ch);
 curl_close($ch);
+
+$cookie = file_get_contents('file.txt');
+//  print $cookie;
+$pattern = "/[A-Za-z0-9]{24}/i";
+preg_match_all($pattern, $cookie, $value);
+$value =  $value[0][0];
+setcookie("ASP.NET_SessionId", $value);
 
 echo $html;

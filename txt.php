@@ -35,14 +35,6 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_COOKIEJAR, 'file.txt');
 curl_setopt($ch, CURLOPT_COOKIEFILE, "file.txt");
 
-$cookie = file_get_contents('file.txt');
-//  print $cookie;
-$pattern = "/[A-Za-z0-9]{24}/i";
-preg_match_all($pattern, $cookie, $value);
-$value =  $value[0][0];
-setcookie("ASP.NET_SessionId", $value);
-
-echo $value;
 //set the cookie the site has for certain features, this is optional
 curl_setopt($ch, CURLOPT_COOKIE, "ASP.NET_SessionId=".uniqid());
 curl_setopt($ch, CURLOPT_USERAGENT,
